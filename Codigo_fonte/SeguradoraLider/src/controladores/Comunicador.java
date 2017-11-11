@@ -48,7 +48,7 @@ public class Comunicador extends ReceiverAdapter
     @SuppressWarnings("unchecked")
     @Override
     public void setState(InputStream input) throws Exception {
-        ArrayList<Mensagem> listaDeMensagems = (ArrayList<Mensagem>) Util.objectFromStream(new DataInputStream(input));
+        this.listaDeMensagens = (ArrayList<Mensagem>) Util.objectFromStream(new DataInputStream(input));
         System.out.println("Estado recebido. A lista possui total de " + listaDeMensagens.size() + " mensagens...");
         objCtrl.atualizarEstado();
     }

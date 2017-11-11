@@ -242,7 +242,11 @@ public class LimiteVisualizacaoChats extends JPanel {
             if (msg.getRementente().equals(chat2TB.getText()) && !msg.getDestinatario().equals(LimiteVisualizacaoChats.GERENCIAL)) {
                 chat2TA.append("\n" + texto);
             } else {
-                todosTA.append("\n" + texto);
+                
+                if(msg.getDestinatario().equals(LimiteVisualizacaoChats.GERENCIAL))
+                {
+                    todosTA.append("\n" + texto);
+                }
             }
         }
     }

@@ -1,8 +1,5 @@
 package controladores;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import limites.LimitePrincipal;
@@ -71,9 +68,6 @@ public class ControleLider {
 
             //Adicionar mensagem a lista de mensagens
             listaDeMensagens.add(msg);
-        }
-        else{
-            System.out.println("Mensagem minha recebida...");
         }
     }
     
