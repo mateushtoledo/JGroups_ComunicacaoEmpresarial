@@ -1,0 +1,27 @@
+
+<!--
+  Default stack using IP multicasting. It is similar to the "udp"
+  stack in stacks.xml, but doesn't use streaming state transfer and flushing
+  author: Bela Ban
+-->
+
+<config xmlns="urn:org:jgroups"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="urn:org:jgroups http://www.jgroups.org/schema/JGroups-3.0.xsd">
+    <UDP/>
+    <PING/>
+    <MERGE2/>
+    <FD_SOCK/>
+    <FD_ALL/>
+    <VERIFY_SUSPECT/>
+    <BARRIER/>
+    <pbcast.NAKACK/>
+    <UNICAST/>
+    <pbcast.STABLE/>
+    <pbcast.GMS/>
+    <SEQUENCER />
+    <UFC/>
+    <MFC/>
+    <FRAG2/>
+    <pbcast.STATE_TRANSFER />
+</config>
