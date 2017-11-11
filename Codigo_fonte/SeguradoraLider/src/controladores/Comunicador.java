@@ -48,7 +48,14 @@ public class Comunicador extends ReceiverAdapter
     @SuppressWarnings("unchecked")
     @Override
     public void setState(InputStream input) throws Exception {
-        this.listaDeMensagens = (ArrayList<Mensagem>) Util.objectFromStream(new DataInputStream(input));
+        //Receber todas as mensagens desse canal
+        ArrayList<Mensagem> lista = (ArrayList<Mensagem>) Util.objectFromStream(new DataInputStream(input));
+        
+        //Atualizar lista de mensagens. Remover todas as salvas e adicionar todas as recebidas
+        listaDeMensagens.clear();
+        listaDeMensagens.addAll(lista);
+        
+        //Informar no prompt o numero de mensagens recebidas
         System.out.println("Estado recebido. A lista possui total de " + listaDeMensagens.size() + " mensagens...");
         objCtrl.atualizarEstado();
     }

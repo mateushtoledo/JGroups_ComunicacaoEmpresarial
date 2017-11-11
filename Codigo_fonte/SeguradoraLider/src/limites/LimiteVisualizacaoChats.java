@@ -236,10 +236,10 @@ public class LimiteVisualizacaoChats extends JPanel {
         String texto = "[" + msg.getUsuario() + "/" + msg.getRementente() + "]: " + msg.getMensagem();
 
         //Seleciona em qual chat exibir de acordo com o remetente
-        if (msg.getRementente().equals(chat1TB.getText()) && !msg.getDestinatario().equals(LimiteVisualizacaoChats.GERENCIAL)) {
+        if (msg.getRementente().equals(chat1TB.getText()) && !msg.getDestinatario().equals(LimiteVisualizacaoChats.GERENCIAL) && msg.getDestinatario().equalsIgnoreCase(deptUsando)) {
             chat1TA.append("\n" + texto);
         } else {
-            if (msg.getRementente().equals(chat2TB.getText()) && !msg.getDestinatario().equals(LimiteVisualizacaoChats.GERENCIAL)) {
+            if (msg.getRementente().equals(chat2TB.getText()) && !msg.getDestinatario().equals(LimiteVisualizacaoChats.GERENCIAL) && msg.getDestinatario().equalsIgnoreCase(deptUsando)) {
                 chat2TA.append("\n" + texto);
             } else {
                 
