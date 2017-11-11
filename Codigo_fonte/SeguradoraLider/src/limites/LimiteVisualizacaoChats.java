@@ -44,13 +44,10 @@ public class LimiteVisualizacaoChats extends JPanel {
         
         //criar text areas
         chat1TA = new JTextArea(10, 45);
-        chat1TA.setText("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::HISTÓRICO::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n");
         chat1TA.setEditable(false);
         chat2TA = new JTextArea(10, 45);
-        chat2TA.setText("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::HISTÓRICO::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n");
         chat2TA.setEditable(false);
         todosTA = new JTextArea(10, 45);
-        todosTA.setText("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::HISTÓRICO::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n");
         todosTA.setEditable(false);
         
         //Criar JToggleButtons
@@ -257,5 +254,9 @@ public class LimiteVisualizacaoChats extends JPanel {
         {
             this.receberMensagem(msg);
         }
+        
+        chat1TA.append("\n------------------------------------------- AS MENSAGENS ACIMA FORAM ENVIADAS ANTES DE VOCE ENTRAR NO CHAT-------------------------------------------\n");
+        chat2TA.append("\n------------------------------------------- AS MENSAGENS ACIMA FORAM ENVIADAS ANTES DE VOCE ENTRAR NO CHAT-------------------------------------------\n");
+        todosTA.append("\n------------------------------------------- AS MENSAGENS ACIMA FORAM ENVIADAS ANTES DE VOCE ENTRAR NO CHAT-------------------------------------------\n");
     }
 }

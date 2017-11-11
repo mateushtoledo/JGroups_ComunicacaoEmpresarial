@@ -62,8 +62,8 @@ public class LimitePrincipal extends JFrame
         
         //Setar parametros no controlador
         objCtrl.setarParamentros(usuario, departamento);
-        
         interfaceComunicacao = new LimiteVisualizacaoChats(objCtrl, departamento, usuario);
+        objCtrl.atualizarEstado();
         card.addLayoutComponent(interfaceComunicacao, "2");        
         central.add(interfaceComunicacao);
         
