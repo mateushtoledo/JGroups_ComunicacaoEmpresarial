@@ -42,7 +42,7 @@ public class ControleLider {
         try {
             canal.start("SEGURADORA");
         } catch (Exception e) {
-            System.err.println("[ERRO]: Falha ao iniciar canal! =" + e.getMessage());
+            System.err.println("[ERRO]: Falha ao iniciar canal! | [CAUSA]:" + e.getMessage());
         }
     }
 
